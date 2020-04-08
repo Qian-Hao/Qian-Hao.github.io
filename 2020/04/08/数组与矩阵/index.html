@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="数据结构," />
 
 
 
@@ -79,14 +79,15 @@
 
 
 
-<meta name="description" content="The process ain&amp;apos;t fun">
+<meta name="description" content="1.重塑矩阵566. 重塑矩阵 题目： 在MATLAB中，有一个非常有用的函数 reshape，它可以将一个矩阵重塑为另一个大小不同的新矩阵，但保留其原始数据。给出一个由二维数组表示的矩阵，以及两个正整数r和c，分别表示想要的重构的矩阵的行数和列数。重构后的矩阵需要将原始矩阵的所有元素以相同的行遍历顺序填充。 如果具有给定参数的reshape操作是可行且合理的，则输出新的重塑矩阵；否则，输出原始矩">
+<meta name="keywords" content="数据结构">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数组与矩阵">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;04&#x2F;08&#x2F;%E6%95%B0%E7%BB%84%E4%B8%8E%E7%9F%A9%E9%98%B5&#x2F;index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="The process ain&amp;apos;t fun">
+<meta property="og:description" content="1.重塑矩阵566. 重塑矩阵 题目： 在MATLAB中，有一个非常有用的函数 reshape，它可以将一个矩阵重塑为另一个大小不同的新矩阵，但保留其原始数据。给出一个由二维数组表示的矩阵，以及两个正整数r和c，分别表示想要的重构的矩阵的行数和列数。重构后的矩阵需要将原始矩阵的所有元素以相同的行遍历顺序填充。 如果具有给定参数的reshape操作是可行且合理的，则输出新的重塑矩阵；否则，输出原始矩">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-04-08T09:44:51.458Z">
+<meta property="og:updated_time" content="2020-04-08T12:30:27.484Z">
 <meta name="twitter:card" content="summary">
 
 
@@ -179,9 +180,9 @@
       
         
         <li class="menu-item menu-item-home">
-          <a href="/%20" rel="section">
+          <a href="/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
             
             首页
           </a>
@@ -189,19 +190,29 @@
       
         
         <li class="menu-item menu-item-tags">
-          <a href="/tags/%20" rel="section">
+          <a href="/tags/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
             
             标签
           </a>
         </li>
       
         
-        <li class="menu-item menu-item-archives">
-          <a href="/archives/%20" rel="section">
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
             
             归档
           </a>
@@ -243,7 +254,7 @@
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/08/%E6%95%B0%E7%BB%84%E4%B8%8E%E7%9F%A9%E9%98%B5/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Akina">
+      <meta itemprop="name" content="qhao">
       <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
@@ -269,7 +280,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-04-08T17:44:51+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-04-08T20:29:23+08:00">
                 2020-04-08
               </time>
             
@@ -279,6 +290,28 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Leetcode/" itemprop="url" rel="index">
+                    <span itemprop="name">Leetcode</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -307,7 +340,56 @@
       
 
       
-        
+        <h2 id="1-重塑矩阵"><a href="#1-重塑矩阵" class="headerlink" title="1.重塑矩阵"></a>1.重塑矩阵</h2><p><a href="https://leetcode-cn.com/problems/reshape-the-matrix/" target="_blank" rel="noopener">566. 重塑矩阵</a></p>
+<p><strong>题目：</strong> 在MATLAB中，有一个非常有用的函数 reshape，它可以将一个矩阵重塑为另一个大小不同的新矩阵，但保留其原始数据。给出一个由二维数组表示的矩阵，以及两个正整数r和c，分别表示想要的重构的矩阵的行数和列数。重构后的矩阵需要将原始矩阵的所有元素以相同的行遍历顺序填充。</p>
+<p>如果具有给定参数的reshape操作是可行且合理的，则输出新的重塑矩阵；否则，输出原始矩阵。</p>
+<p><strong>示例：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">输入: </span><br><span class="line">nums = </span><br><span class="line">[[1,2],</span><br><span class="line"> [3,4]]</span><br><span class="line">r = 1, c = 4</span><br><span class="line">输出: </span><br><span class="line">[[1,2,3,4]]</span><br><span class="line">解释:</span><br><span class="line">行遍历nums的结果是 [1,2,3,4]。新的矩阵是 1 * 4 矩阵, 用之前的元素值一行一行填充新矩阵。</span><br></pre></td></tr></table></figure>
+
+<p><strong>方法：</strong> 先判断暴力遍历整个二维数组，将值存入一个一维数组numbers中，再新建一个二维数组arr，每次取出numbers中的第一个元素，作为arr [i] [j]的值(i&lt;r,j&lt;c)。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> matrixReshape = <span class="function"><span class="keyword">function</span>(<span class="params">nums, r, c</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> rows = nums.length; <span class="comment">//矩阵的行数</span></span><br><span class="line">    <span class="keyword">let</span> columns = nums[<span class="number">0</span>].length; <span class="comment">//矩阵的列数</span></span><br><span class="line">    <span class="keyword">if</span>(rows*columns!=r*c)</span><br><span class="line">        <span class="keyword">return</span> nums;</span><br><span class="line">    <span class="keyword">let</span> numbers = <span class="keyword">new</span> <span class="built_in">Array</span>();</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> i=<span class="number">0</span>;i&lt;rows;++i)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">let</span> j=<span class="number">0</span>;j&lt;columns;++j)</span><br><span class="line">        &#123;</span><br><span class="line">            numbers.push(nums[i][j]);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">let</span> arr = <span class="keyword">new</span> <span class="built_in">Array</span>();     <span class="comment">//先声明一维</span></span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;r;i++)</span><br><span class="line">    &#123;          </span><br><span class="line">        arr[i]=<span class="keyword">new</span> <span class="built_in">Array</span>();    <span class="comment">//再声明二维</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;r;++i)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span>(j=<span class="number">0</span>;j&lt;c;++j)</span><br><span class="line">        &#123;</span><br><span class="line">            arr[i][j] = numbers.shift();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> arr;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p><strong>方法二：</strong> 只需进行一次遍历，arr[i] [j] = nums [Math.trunc(index/columns)] [index % columns];Math.trunc(index/columns)是行号，index%columns是列号，可通过这种方式遍历原矩阵。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> matrixReshape = <span class="function"><span class="keyword">function</span>(<span class="params">nums, r, c</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> rows = nums.length,columns = nums[<span class="number">0</span>].length; </span><br><span class="line">    <span class="keyword">if</span>(rows*columns!=r*c)</span><br><span class="line">        <span class="keyword">return</span> nums;</span><br><span class="line">    <span class="keyword">let</span> arr = <span class="keyword">new</span> <span class="built_in">Array</span>();     <span class="comment">//先声明一维</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> i=<span class="number">0</span>;i&lt;r;i++)</span><br><span class="line">    &#123;          </span><br><span class="line">        arr[i]=<span class="keyword">new</span> <span class="built_in">Array</span>();    <span class="comment">//再声明二维</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">var</span> index = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> i=<span class="number">0</span>;i&lt;r;++i)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">let</span> j=<span class="number">0</span>;j&lt;c;++j)</span><br><span class="line">        &#123;</span><br><span class="line">            arr[i][j] = nums[<span class="built_in">Math</span>.trunc(index/columns)][index % columns];</span><br><span class="line">            index++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> arr;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-有序矩阵中第K小的元素"><a href="#2-有序矩阵中第K小的元素" class="headerlink" title="2.有序矩阵中第K小的元素"></a>2.有序矩阵中第K小的元素</h2><p><a href="https://leetcode-cn.com/problems/kth-smallest-element-in-a-sorted-matrix/" target="_blank" rel="noopener">378. 有序矩阵中第K小的元素</a></p>
+<p><strong>题目：</strong> 给定一个 <em>n x n</em> 矩阵，其中每行和每列元素均按升序排序，找到矩阵中第k小的元素。<br>请注意，它是排序后的第 k 小元素，而不是第 k 个不同的元素。</p>
+<p><strong>示例：</strong> </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">matrix = [</span><br><span class="line">   [ 1,  5,  9],</span><br><span class="line">   [10, 11, 13],</span><br><span class="line">   [12, 13, 15]</span><br><span class="line">],</span><br><span class="line">k = 8,</span><br><span class="line"></span><br><span class="line">返回 13。</span><br></pre></td></tr></table></figure>
+
+<p><strong>方法：</strong> 先用一个额外数组nums按顺序存储矩阵中的元素，再对数组进行排序，再返回数组中下标为k-1的值。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> kthSmallest = <span class="function"><span class="keyword">function</span>(<span class="params">matrix, k</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> nums = <span class="keyword">new</span> <span class="built_in">Array</span>();</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> i=<span class="number">0</span>;i&lt;matrix.length;++i)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">let</span> j=<span class="number">0</span>;j&lt;matrix[<span class="number">0</span>].length;++j)</span><br><span class="line">        &#123;</span><br><span class="line">            nums.push(matrix[i][j]);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">sortNums</span>(<span class="params">a,b</span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> a-b;</span><br><span class="line">    &#125;</span><br><span class="line">    nums.sort(sortNums);</span><br><span class="line">    <span class="keyword">return</span> nums[k<span class="number">-1</span>];</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p><strong>方法二：</strong> 二分查找，第k小的值一定在[left,right]中，其中left=matrix[0] [0]，right=matrix[row] [col]。定义mid=(left+right)/2，每次查找矩阵中比mid小的元素个数，如果mid&lt;k，则left=mid+1，否则，right=mid。最后，当left=right时，right即为第k小的值。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> kthSmallest = <span class="function"><span class="keyword">function</span>(<span class="params">matrix, k</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> row=matrix.length,col=matrix[<span class="number">0</span>].length;</span><br><span class="line">    <span class="keyword">let</span> left=matrix[<span class="number">0</span>][<span class="number">0</span>],right=matrix[row<span class="number">-1</span>][col<span class="number">-1</span>];</span><br><span class="line">    <span class="keyword">while</span>(left&lt;right)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">let</span> mid = <span class="built_in">Math</span>.trunc((left+right)/<span class="number">2</span>);</span><br><span class="line">        <span class="keyword">let</span> count = findcount(matrix,mid,row,col);</span><br><span class="line">        <span class="keyword">if</span>(count&lt;k)&#123;</span><br><span class="line">            left = mid +<span class="number">1</span>;</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            right=mid;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> right;</span><br><span class="line">&#125;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">findcount</span>(<span class="params">matrix,mid,row,col</span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">let</span> i=<span class="number">0</span>,j=col<span class="number">-1</span>,count=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span>(i&lt;row&amp;&amp;j&gt;=<span class="number">0</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(matrix[i][j]&lt;=mid)</span><br><span class="line">            &#123;</span><br><span class="line">                count += j+<span class="number">1</span>;</span><br><span class="line">                i++;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                j--;</span><br><span class="line">        &#125;</span><br><span class="line">    <span class="keyword">return</span> count;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-对角元素相等的矩阵"><a href="#3-对角元素相等的矩阵" class="headerlink" title="3.对角元素相等的矩阵"></a>3.对角元素相等的矩阵</h2><p><a href="https://leetcode-cn.com/problems/toeplitz-matrix/" target="_blank" rel="noopener">766. 托普利茨矩阵</a></p>
+<p><strong>题目：</strong> 如果一个矩阵的每一方向由左上到右下的对角线上具有相同元素，那么这个矩阵是托普利茨矩阵。</p>
+<p>给定一个 M x N 的矩阵，当且仅当它是托普利茨矩阵时返回 True。</p>
+<p><strong>示例：</strong> </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">输入: </span><br><span class="line">matrix = [</span><br><span class="line">  [1,2,3,4],</span><br><span class="line">  [5,1,2,3],</span><br><span class="line">  [9,5,1,2]</span><br><span class="line">]</span><br><span class="line">输出: True</span><br></pre></td></tr></table></figure>
+
+<p><strong>方法：</strong> 每次将矩阵中的元素与右下方的元素相比较，若相等则继续，若不相等则返回false，最终返回true（既比较matrix[i] [j]与matrix[i+1] [j+1]是否相等）。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> isToeplitzMatrix = <span class="function"><span class="keyword">function</span>(<span class="params">matrix</span>) </span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> i=<span class="number">0</span>;i&lt;matrix.length<span class="number">-1</span>;++i)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">let</span> j=<span class="number">0</span>;j&lt;matrix[<span class="number">0</span>].length<span class="number">-1</span>;++j)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(matrix[i][j]==matrix[i+<span class="number">1</span>][j+<span class="number">1</span>])</span><br><span class="line">                <span class="keyword">continue</span>;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h2 id="4-数组嵌套"><a href="#4-数组嵌套" class="headerlink" title="4.数组嵌套"></a>4.数组嵌套</h2><p><strong>题目：</strong> 索引从0开始长度为N的数组A，包含0到N - 1的所有整数。找到并返回最大的集合S，S[i] = {A[i], A[A[i]], A[A[A[i]]], … }且遵守以下的规则。</p>
+<p>假设选择索引为i的元素A[i]为S的第一个元素，S的下一个元素应该是A[A[i]]，之后是A[A[A[i]]]… 以此类推，不断添加直到S出现重复的元素。</p>
+<p><strong>示例：</strong> </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">输入: A = [5,4,0,3,1,6,2]</span><br><span class="line">输出: 4</span><br><span class="line">解释: </span><br><span class="line">A[0] = 5, A[1] = 4, A[2] = 0, A[3] = 3, A[4] = 1, A[5] = 6, A[6] = 2.</span><br><span class="line"></span><br><span class="line">其中一种最长的 S[K]:</span><br><span class="line">S[0] = &#123;A[0], A[5], A[6], A[2]&#125; = &#123;5, 6, 2, 0&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>方法：</strong> 暴力会超时。问题就是寻找数组中的最大环，因为环外的元素不会访问到环内，所以可以将访问过的数组元素的值标为-1，下次不再访问，避免冗余。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arrayNesting = <span class="function"><span class="keyword">function</span>(<span class="params">nums</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> max=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;nums.length;++i)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">var</span> count=<span class="number">0</span>,k=i;</span><br><span class="line">        <span class="keyword">while</span>(nums[k]!=<span class="number">-1</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            count++;</span><br><span class="line">            <span class="keyword">var</span> temp = nums[k];</span><br><span class="line">            nums[k] = <span class="number">-1</span>;</span><br><span class="line">            k = temp;</span><br><span class="line">        &#125;</span><br><span class="line">        max = <span class="built_in">Math</span>.max(count,max);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> max;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h2 id="5-最多能完成排序的块"><a href="#5-最多能完成排序的块" class="headerlink" title="5.最多能完成排序的块"></a>5.最多能完成排序的块</h2><p><a href="https://leetcode-cn.com/problems/max-chunks-to-make-sorted/" target="_blank" rel="noopener">769. 最多能完成排序的块</a></p>
+<p><strong>题目：</strong> 数组arr是[0, 1, …, arr.length - 1]的一种排列，我们将这个数组分割成几个“块”，并将这些块分别进行排序。之后再连接起来，使得连接的结果和按升序排序后的原数组相同。</p>
+<p>我们最多能将数组分成多少块？</p>
+<p><strong>示例：</strong> </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">输入: arr = [4,3,2,1,0]</span><br><span class="line">输出: 1</span><br><span class="line">解释:</span><br><span class="line">将数组分成2块或者更多块，都无法得到所需的结果。</span><br><span class="line">例如，分成 [4, 3], [2, 1, 0] 的结果是 [3, 4, 0, 1, 2]，这不是有序的数组。</span><br></pre></td></tr></table></figure>
+
+<p><strong>方法：</strong> 块内最大数应该等于块的右边界的下标。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> maxChunksToSorted = <span class="function"><span class="keyword">function</span>(<span class="params">arr</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> count = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">var</span> right = arr[<span class="number">0</span>];</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> i=<span class="number">0</span>;i&lt;arr.length;++i)</span><br><span class="line">    &#123;</span><br><span class="line">        right = <span class="built_in">Math</span>.max(right,arr[i]);</span><br><span class="line">        <span class="keyword">if</span>(right==i)</span><br><span class="line">        &#123;</span><br><span class="line">            count++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> count;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+
       
     </div>
     
@@ -322,6 +404,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="tag"># 数据结构</a>
+          
+        </div>
+      
 
       
       
@@ -331,8 +419,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/11/12/%E6%B7%B1%E5%BA%A6CTR%E9%A2%84%E4%BC%B0%E6%A8%A1%E5%9E%8B/" rel="next" title="深度CTR预估模型">
-                <i class="fa fa-chevron-left"></i> 深度CTR预估模型
+              <a href="/2019/11/12/hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
               </a>
             
           </div>
@@ -340,10 +428,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2020/04/08/%E7%9F%A9%E9%98%B5/" rel="prev" title="矩阵">
-                矩阵 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -395,12 +479,21 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <p class="site-author-name" itemprop="name">Akina</p>
+              <p class="site-author-name" itemprop="name">qhao</p>
               <p class="site-description motion-element" itemprop="description">The process ain't fun</p>
           </div>
 
@@ -409,16 +502,34 @@
             
               <div class="site-state-item site-state-posts">
               
-                <a href="/archives/%20%7C%7C%20archive">
+                <a href="/archives/">
               
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
             
 
             
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
 
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
             
 
           </nav>
@@ -439,6 +550,22 @@
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-重塑矩阵"><span class="nav-number">1.</span> <span class="nav-text">1.重塑矩阵</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-有序矩阵中第K小的元素"><span class="nav-number">2.</span> <span class="nav-text">2.有序矩阵中第K小的元素</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-对角元素相等的矩阵"><span class="nav-number">3.</span> <span class="nav-text">3.对角元素相等的矩阵</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-数组嵌套"><span class="nav-number">4.</span> <span class="nav-text">4.数组嵌套</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-最多能完成排序的块"><span class="nav-number">5.</span> <span class="nav-text">5.最多能完成排序的块</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
 
@@ -456,7 +583,7 @@
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">Akina</span>
+  <span class="author" itemprop="copyrightHolder">qhao</span>
 
   
 </div>
